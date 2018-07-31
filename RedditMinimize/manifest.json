@@ -9,7 +9,7 @@
 
 	"content_scripts" : [
 		{
-			"matches": ["https://Reddit.com/*"],
+			"matches": ["https://www.reddit.com/*"],
 			"exclude_matches": ["*://*/*comments*"],
 			"js": ["minimize.js"]
 		}
