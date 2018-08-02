@@ -1,3 +1,9 @@
+/*
+* Author: Michael Song
+* Last Edited: 8/1/2018
+* Description: JS code that allows you to minimize posts on reddit.com
+* TODO: Get it to update as reddit infinite scroll gives more posts. 
+*/
 var parent = $('div[id^="t3_"]');
 var buttons = [];
 var bools = [];
