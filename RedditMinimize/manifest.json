@@ -1,11 +1,17 @@
 {
     "name": "Reddit Minimize",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "description": "A chrome extension to minimize posts on Reddit",
     "manifest_version": 2,
     "permissions": [
         "activeTab"
     ],
+
+    "icons": {
+    	"16": "reddit-logo-16x16.png",
+    	"48": "reddit-logo-48x48.png",
+    	"128": "reddit-logo-128x128.png"
+    },
 
     "content_scripts": [
     {
