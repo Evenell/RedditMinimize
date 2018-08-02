@@ -1,17 +1,16 @@
 {
-	"name" : "Reddit Minimize",
-	"version" : "1.0.2.29",
-	"description" : "A chrome extension to minimize posts on Reddit",
-	"manifest_version" : 2,
-	"permissions": [
-		"activeTab"
-	],
+    "name": "Reddit Minimize",
+    "version": "1.0.1",
+    "description": "A chrome extension to minimize posts on Reddit",
+    "manifest_version": 2,
+    "permissions": [
+        "activeTab"
+    ],
 
-	"content_scripts" : [
-		{
-			"matches": ["https://www.reddit.com/*"],
-			"exclude_matches": ["*://*/*comments*"],
-			"js": ["jquery-3.3.1.min.js", "minimize.js"]
-		}
-	]
+    "content_scripts": [
+    {
+        "matches": ["https://www.reddit.com/*"],
+        "exclude_matches": ["*://*/*comments*"],
+        "js": ["jquery-3.3.1.min.js", "minimize.js"]
+    }]
 }
