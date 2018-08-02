@@ -1,15 +1,32 @@
-window.addEventListener('load', function() {
-    var parent = document.getElementsByClassName("s545dfq-0 uXALa")
+var parent = $('div[id^="t3_"]');
+var buttons = [];
+var bools = [];
+var i;
+for (i = 0; i < parent.length; i++) {;
+    try { throw i } catch (ii) {
+        console.log(ii);
+        bools[ii] = true;
+        buttons[ii] = document.createElement("button");
+        buttons[ii].setAttribute("type", "button");
+        buttons[ii].setAttribute("name", "minimize");
+        buttons[ii].innerHTML = "-";
 
-    var minimize = document.createElement("button");
-    minimize.innerHTML = "old";
-    for (int i = 0; i < parent.length; i++) {
-    	parent[i].appendChild(minimize);
+        buttons[ii].addEventListener('click', function() {
+            console.log(ii);
+            if (bools[ii] == true) {
+                $(parent[ii]).children().hide();
+                console.log("0 to 1 success");
+                console.log("1");
+            } else if (bools[ii] == false) {
+                $(parent[ii]).children().show();
+                console.log("1 to 0 success");
+                console.log("0");
+
+            }
+            bools[ii] = !bools[ii];
+        });
+
+        var grandparentDiv = parent[ii].parentNode;
+        grandparentDiv.insertBefore(buttons[ii], parent[ii]);
     }
-
-    minimize.addEventListener("click", function() {
-        "s545dfq-0 uXALa" {
-            display: none;
-        }
-    });
-});
+}
